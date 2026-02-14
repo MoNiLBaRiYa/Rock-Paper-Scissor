@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+</head>
+<body>
+    <h1>Rock, Paper and Scissors</h1>
+    
+    <!--Loading Animation-->
+    <div class="loading-container" id="loadingContainer">
+        <dotlottie-wc 
+            src="https://lottie.host/6af75008-eb09-4504-b590-d5fe1e0c7e7c/dH0aJykqZr.lottie" 
+            style="width: 300px; height: 300px" 
+            autoplay 
+            loop>
+        </dotlottie-wc>
+        <p class="loading-text">Calculating...</p>
+    </div>
+
+    <!--game-->
+    <div class="choices" id="choices">
+        <div class="choice" id="rock" data-choice="rock">
+            <img src="./Images/rock.png" alt="Rock">
+            <p class="choice-label">Rock</p>
+        </div>
+        <div class="choice" id="paper" data-choice="paper">
+            <img src="./Images/paper.png" alt="Paper">
+            <p class="choice-label">Paper</p>
+        </div>
+        <div class="choice" id="scissors" data-choice="scissors">
+            <img src="./Images/scissors.png" alt="Scissors">
+            <p class="choice-label">Scissors</p>
+        </div>
+    </div>
+    
+    <!--Score-->
+    <div class="scoreboard">
+        <div class="score user-score">
+           <p class="score-number" id="userscore">0</p> 
+           <p class="score-label">You</p>
+        </div>
+        <div class="score computer-score">
+           <p class="score-number" id="computerscore">0</p> 
+           <p class="score-label">Computer</p>
+        </div>
+    </div>
+
+    <!--result-->
+    <div class="msg-container">
+        <p id="msg">Play Your Move</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
